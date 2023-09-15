@@ -5,10 +5,13 @@ export default defineConfig({
 
     //追加
     server: {
-        host: '0.0.0.0',
+        host: true,
         hmr: {
             host: 'localhost'
         }
+    },
+    watch: {
+        usePolling: true,
     },
     //ここまで
     plugins: [
