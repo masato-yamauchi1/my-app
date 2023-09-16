@@ -27,8 +27,15 @@
             @endif
 
             <h1>各自インジケーターのバックテストによる検証結果</h1>
+            @if ($data_list->isNotEmpty())
+            <ul>
+            @foreach ($data_list as $item)
+                <li>
+                    {{ $item->title }}
+                </li>
+            @endforeach
+            </ul>
+            @endif
         </div>
-        
-        
     </body>
 </html>
