@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     //インジケーター管理
+    Route::resource('/indicator', IndicatorController::class);
     Route::get('/indicator', [IndicatorController::class, 'index'])->name('indicator');
 });
 
