@@ -31,7 +31,6 @@ class IndicatorController extends Controller
         return view('indicator.create');
     }
 
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -44,5 +43,16 @@ class IndicatorController extends Controller
         exit;
     }
 
+     /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        echo "保存";
+        exit;
+    }
 
 }

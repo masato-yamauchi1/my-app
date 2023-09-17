@@ -10,8 +10,8 @@
                     @if ($indicator_lists->isNotEmpty())
                     <table class="table-auto">
                         <thead>
-                        <tr class="bg-cyan-100">
-                            <th class="bg-red-100 border px-4 py-2">
+                        <tr class="bg-gray-200">
+                            <th class="border px-4 py-2">
                                 インジケーターID
                             </th>
                             <th class="border px-4 py-2">
@@ -23,7 +23,7 @@
                         </tr>
                         </thead>
                     @foreach ($indicator_lists as $item)
-                        <tr  class="bg-gray-200">
+                        <tr>
                             <td class="border px-4 py-2">{{ $item->indicators_id }}</td>
                             <td class="border px-4 py-2">
                                 <a href="/indicator/{{ $item->indicators_id }}/edit/" style="text-decoration:underline;">{{ $item->indicator_name }}</a>

@@ -6,12 +6,12 @@
                     <p class="mb-4">インジケーター新規作成画面です。</p>
                     <p class="mb-4"><span class="text-red-600">*</span>のものは必須です。</p>
                     
-                    <form action="/tasks" method="post" class="mt-10">
+                    <form action="/indicator/" method="post">
                     @csrf
                     <table class="table-auto w-full">
                         <thead>
-                        <tr>
-                            <th class="bg-red-100 border px-4 py-2" style="width:30%">
+                        <tr class="bg-gray-200">
+                            <th class="border px-4 py-2" style="width:30%">
                                 インジケーター名<span class="text-red-600">*</span>
                             </th>
                             <th class="border px-4 py-2" style="width:10%">
@@ -22,7 +22,7 @@
                             </th>
                         </tr>
                         </thead>
-                        <tr  class="bg-gray-200">
+                        <tr>
                             <td class="border px-4 py-2">
                                 <input type="text" id="indicator_name" name="indicator_name" maxlength="50" class="rounded border-gray-300 w-full" />
                             </td>
@@ -37,6 +37,9 @@
                             </td>
                         </tr>
                     </table>
+                    <div class="mt-4">
+                        <input type="submit" value="登録する" class="bg-gray-900 hover:bg-gray-700 text-white rounded px-4 py-2" />
+                    </div>
                     </form>
                 </div>
             </div>
