@@ -18,8 +18,8 @@ return new class extends Migration
 
             $table->id('id')->comment('ロジックID');
             $table->string('title', 50)->comment('ロジックのタイトル');
-            $table->string('graph_img_name', 50)->comment('グラフイメージファイルの名前');
-            $table->string('result_img_name', 50)->comment('バックテストの結果イメージファイルの名前');
+            $table->string('graph_img_name', 70)->comment('グラフイメージファイルの名前');
+            $table->string('result_img_name', 70)->comment('バックテストの結果イメージファイルの名前');
             $table->integer('main_indicator_id')->nullable()->comment('使用しているメインインジケーター');;
             $table->integer('sub_indicator_id')->nullable()->comment('使用しているサブインジケーター');;
             $table->text('logics_body')->nullable()->comment('ロジックの内容');

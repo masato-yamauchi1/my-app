@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TopController;
 use App\Http\Controllers\IndicatorController;
+use App\Http\Controllers\LogicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//コントローラーでトップを表示
 Route::get('/',[TopController::class, 'index']);
 
 Route::get('/dashboard', function () {
@@ -31,6 +31,9 @@ Route::middleware('auth')->group(function () {
     //インジケーター管理
     Route::resource('/indicator', IndicatorController::class);
     Route::get('/indicator', [IndicatorController::class, 'index'])->name('indicator');
+    //ロジック管理
+    Route::resource('/logic', LogicController::class);
+    Route::get('/logic', [LogicController::class, 'index'])->name('logic');
 });
 
 

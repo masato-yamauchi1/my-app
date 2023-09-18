@@ -21,6 +21,11 @@
                         {{ __('インジケーター管理') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('logic')" :active="request()->routeIs('logic')">
+                        {{ __('ロジック管理') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

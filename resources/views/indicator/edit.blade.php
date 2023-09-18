@@ -63,7 +63,7 @@
                         <form action="/indicator/{{$indicator_lists->id}}" method="post">
                         @csrf
                         @method('DELETE')
-                            <input type="submit" value="削除する" class="bg-gray-900 hover:bg-gray-700 text-white rounded px-4 py-2" />
+                            <input type="submit" value="削除する" class="bg-gray-900 hover:bg-gray-700 text-white rounded px-4 py-2" onclick="return window.confirm('削除しますか？');" />
                         </form>
                     </div>
                     
