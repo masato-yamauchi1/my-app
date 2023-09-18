@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('logics', function (Blueprint $table) {
             $table->comment('各ロジックの内容を保存する'); 
 
-            $table->id('logics_id')->comment('ロジックID');
+            $table->id('id')->comment('ロジックID');
             $table->string('title', 50)->comment('ロジックのタイトル');
             $table->string('graph_img_name', 50)->comment('グラフイメージファイルの名前');
             $table->string('result_img_name', 50)->comment('バックテストの結果イメージファイルの名前');

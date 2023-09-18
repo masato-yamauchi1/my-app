@@ -24,9 +24,9 @@
                         </thead>
                     @foreach ($indicator_lists as $item)
                         <tr>
-                            <td class="border px-4 py-2">{{ $item->indicators_id }}</td>
+                            <td class="border px-4 py-2">{{ $item->id }}</td>
                             <td class="border px-4 py-2">
-                                <a href="/indicator/{{ $item->indicators_id }}/edit/" style="text-decoration:underline;">{{ $item->indicator_name }}</a>
+                                <a href="/indicator/{{ $item->id }}/edit/" style="text-decoration:underline;">{{ $item->indicator_name }}</a>
                             </td>
                             <td class="border px-4 py-2">
                             @if($item->active == 1) 

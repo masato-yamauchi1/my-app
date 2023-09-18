@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('indicators', function (Blueprint $table) {
             $table->comment('インジケーターの内容を保存する'); 
 
-            $table->id('indicators_id')->comment('インジケータID');
+            $table->id('id')->comment('インジケータID');
             $table->string('indicator_name', 50)->comment('インジケータ名');
             $table->text('indicator_body')->nullable()->comment('インジケータの内容');
             $table->string('last_user', 50)->comment('最終更新、登録者');

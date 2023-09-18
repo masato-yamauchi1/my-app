@@ -26,7 +26,7 @@
                             <td class="border px-4 py-2">
                                 <input type="text" id="indicator_name" name="indicator_name" maxlength="50" class="rounded border-gray-300 w-full" />
                             </td>
-                            <td class="border px-4 py-2 align-top">
+                            <td class="border px-4 py-2">
                                 <select name="active" class="rounded border-gray-300">
                                     <option value="1">有効</option>
                                     <option value="0">無効</option>
@@ -40,6 +40,15 @@
                     <div class="mt-4">
                         <input type="submit" value="登録する" class="bg-gray-900 hover:bg-gray-700 text-white rounded px-4 py-2" />
                     </div>
+                    @if(count($errors) > 0)
+                        @foreach ($errors->all() as $error)
+                        <p class="text-red-600 mt-4">{{$error}}</p>
+                        @endforeach
+                    @endif
+
+                    @if($insert_error)
+                        <p class="text-red-600 mt-4">{{$insert_error}}</p>
+                    @endif
                     </form>
                 </div>
             </div>

@@ -15,8 +15,8 @@ class TopController extends Controller
         //クエリービルダー確認用
         //\DB::enableQueryLog();
         $data_list = DB::table('logics as a')
-            ->leftJoin('indicators as b', 'a.main_indicator_id', '=', 'b.indicators_id')
-            ->leftJoin('indicators as c', 'a.sub_indicator_id', '=', 'c.indicators_id')
+            ->leftJoin('indicators as b', 'a.main_indicator_id', '=', 'b.id')
+            ->leftJoin('indicators as c', 'a.sub_indicator_id', '=', 'c.id')
             ->select('a.*', 'b.indicator_name as main_indicator_name','c.indicator_name as sub_indicator_name')
             ->where('a.active', '=', 1)
             ->where(function ( $query) {
