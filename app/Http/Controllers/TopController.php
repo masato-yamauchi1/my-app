@@ -27,6 +27,7 @@ class TopController extends Controller
                 $query->where('c.active', '=', 1)
                       ->orwhereNull('c.active');
             })
+            ->orderBy('a.id','asc')
             ->get();
         //dd(\DB::getQueryLog());
         return view('top' , ['data_list' => $data_list]);
