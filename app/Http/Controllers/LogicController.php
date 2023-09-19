@@ -110,7 +110,7 @@ class LogicController extends Controller
             });
         } catch (\Exception $e) {
             Log::error($e);
-            dd($e);
+            //dd($e);
             return view('logic.create')->with('insert_error','登録失敗しロールバックしました。');
         }
         return redirect('/logic/');
